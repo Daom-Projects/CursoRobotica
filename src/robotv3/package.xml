@@ -17,5 +17,6 @@ for robotv3 robot</p>
   <depend>gazebo</depend>
   <export>
     <architecture_independent />
+    
   </export>
 </package>
