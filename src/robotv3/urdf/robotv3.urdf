@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robotv3">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1.4249" />
+      <inertia
+        ixx="0.0031413"
+        ixy="-4.3508E-09"
+        ixz="-8.3589E-08"
+        iyy="0.0063902"
+        iyz="-1.8491E-05"
+        izz="0.0037714" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotv3/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotv3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  
+  <link
+    name="RuedaIzquiera_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.051174" />
+      <inertia
+        ixx="2.6466E-05"
+        ixy="-2.103E-10"
+        ixz="-1.8221E-12"
+        iyy="2.6484E-05"
+        iyz="-5.8818E-12"
+        izz="5.2091E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotv3/meshes/RuedaIzquiera_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotv3/meshes/RuedaIzquiera_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <joint
+    name="RuedaIzquiera_Join"
+    type="continuous">
+    <origin
+      xyz="0.077499 -0.046747 0.0188"
+      rpy="1.5708 0.31998 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="RuedaIzquiera_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+
+
+
+  <link
+    name="RuedaDerecha_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.051174" />
+      <inertia
+        ixx="2.6466E-05"
+        ixy="-2.1296E-10"
+        ixz="-1.7932E-12"
+        iyy="2.6484E-05"
+        iyz="-6.071E-12"
+        izz="5.2091E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotv3/meshes/RuedaDerecha_Link.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotv3/meshes/RuedaDerecha_Link.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RuedaDerecha_Join"
+    type="continuous">
+    <origin
+      xyz="-0.077499 -0.046668 0.0188"
+      rpy="1.5708 -0.6635 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="RuedaDerecha_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+
+
+
+
+
+  <link
+    name="Camara_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.021409" />
+      <inertia
+        ixx="8.5599E-06"
+        ixy="-1.5783E-21"
+        ixz="-2.1926E-09"
+        iyy="9.5278E-06"
+        iyz="-1.0965E-06"
+        izz="8.6521E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotv3/meshes/Camara_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96471 0.96471 0.95294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotv3/meshes/Camara_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="Camara_Join"
+    type="fixed">
+    <origin
+      xyz="0.0023614 -0.099152 0.1263"
+      rpy="1.5708 0 0.023812" />
+    <parent
+      link="base_link" />
+    <child
+      link="Camara_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link
+    name="Lidar_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0.00058388"
+        ixy="0.00015345"
+        ixz="8.9875E-07"
+        iyy="0.0010719"
+        iyz="3.0431E-06"
+        izz="0.00091993" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotv3/meshes/Lidar_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotv3/meshes/Lidar_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="Lider_Join"
+    type="fixed">
+    <origin
+      xyz="0 -0.07775 0.2396"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Lidar_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+    <!--              GAZEBO PLUGINS                     -->
+
+
+  <!--                    differential_drive_controller               -->
+  <gazebo>
+    <plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller">
+      <leftJoint>RuedaIzquiera_Join</leftJoint>
+      <legacyMode>false</legacyMode>
+      <rightJoint>RuedaDerecha_Join</rightJoint>
+
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <wheelSeperation>0.235</wheelSeperation>
+      <wheelDiameter>0.090</wheelDiameter>
+      <publishWheelJointState>true</publishWheelJointState>
+    </plugin>
+  </gazebo>
+</robot>
